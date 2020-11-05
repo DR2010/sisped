@@ -1,0 +1,424 @@
+
+
+                         R O D O T E C ****************************
+                         *************** SISTEMAS DE CONTROLE LTDA.
+
+
+
+
+                           Sistema de Pedidos de Vales transporte
+                           ======================================
+                                        SISPED  2.0
+                                        Release 2.0
+
+
+
+         - Indice
+
+
+
+           1 - Introducao .............................................
+
+           2 - Configuracao Minima ....................................
+
+           3 - Instalacao do Sistema ..................................
+
+           4 - Procedimentos de Padronizacao de Operacao...............
+
+           5 - Operacao do Sistema
+
+               5.1 - Execucao do Sistema ..............................
+
+               5.2 - Implantacao do Sistema ...........................
+
+               5.3 - Solicitacao de Vales Transporte ..................
+
+               5.4 - Geracao do Disquete para Fetranspor ..............
+
+           6 - Relatorios Disponiveis ao Sistema ......................
+
+           7 - Utilitarios ............................................
+
+           8 - Conversao das Bases de Dados (Versoes Anteriores)........
+
+
+
+
+         1 - Introducao
+             ----------
+
+             O  Sistema de Pedidos de Vales Transporte foi desenvolvido  visando
+        agilizar o processo de aquisicao de Vales Transporte por meio  magnetico
+        e assegurar o aceite, sem erros, do arquivo enviado a Fetranspor.
+
+             O pedido de vales transporte por meio magnetico alem de simplificar
+        os  procedimentos de aquisicao, aumenta a confiabilidade do  processo  e
+        ainda  permite  que  os  vales sejam emitidos  por  setor  ou  em  ordem
+        alfabetica,  agilizando e simplificando o processo de distribuicao   dos
+        vales aos empregados.
+
+             A implantacao do sistema e bastante simples e o retorno obtido  com
+        seu  uso e plenamente satisfatorio. A sua utilizacao proporciona,  entre
+        outras  vantagens,  a geracao automatica do disquete e do  relatorio  de
+        acompanhamento   exigido  pela  Fetranspor,  e  coloca   a   disposicao,
+        relatorios  de nivel operacional e gerencial importantes ao controle  da
+        empresa.
+
+             A   distribuicao  desse  sistema  e  inteiramente   gratuita,   sem
+        finalidade  comercial.  Pode  ser copiado entre  usuarios  sem  qualquer
+        restricao  e  tem como objetivo principal aprimorar, cada  vez  mais,  a
+        qualidade dos servicos prestados pela Fetranspor a seus usuarios.
+
+
+
+    ********   OBSERVACAO IMPORTANTE (1) :  ********************************
+
+             Para  proceder a copia deve ser usado o comando DISKCOPY do DOS.  O
+        disquete origem e o disquete destino devem ter a mesma midia.
+
+             O COMANDO COPY NAO FUNCIONA ADEQUADAMENTE.
+
+
+    ********   OBSERVACAO IMPORTANTE (2) :  ********************************
+
+             Este software e' estritamente MONOUSUARIO. Portanto, nao foi pre-
+        vista sua utilizacao como multiusuario nem sob quaisquer sistemas ope-
+        racionais que nao sejam os compativeis com o MS-DOS.
+
+
+
+          2 - Configuracao Minima
+              -------------------
+
+
+             . Sistema Operacional MS DOS - Versao 3.3 ou Superior
+
+             . IBM PC XT/AT Compativel
+
+             . Memoria Ram de 640 Kbytes
+
+             . Unidade De Disco Rigido
+                          Com no minimo 1 Mbyte livre para cada
+                          50  funcionarios.
+
+             . Drive de 5 1/4 ( 1.2 Mbytes ou 360 Kbytes)
+
+             . Impressora (Matricial ou Laser)
+
+
+
+    ********   OBSERVACAO IMPORTANTE (2) :  ********************************
+
+             Na RAIZ do seu Winchester ( Diretorio C:\ ) deve haver um arquivo
+           chamado CONFIG.SYS.
+
+             Caso exista, ele deve conter os seguintes comandos :
+
+                    FILES=100
+                    BUFFERS=24
+
+             Os valores 55 e 24 sao valores minimos. Se o seu CONFIG.SYS os tem
+           maiores, nao altere.
+
+             Caso nao exista, crie-o atraves de um editor de textos ou use os
+           seguintes comandos a partir do prompt ( C> , C:\> ou equivalente ):
+
+                   C:\> COPY CON: CONFIG.SYS
+                        FILES=100
+                        BUFFERS=24
+
+             Apos isto digite as teclas [CTRL] e [Z] simultaneamente.
+             Aparecera na tela ^Z .
+             Em seguida aperte [ENTER] .
+
+             Ao fazer isto, voce estara novamente no prompt.
+
+                   C:\>
+
+             Agora voce deve dar um "BOOT" na maquina ( desligar e ligar ).
+             Pronto ! O seu computador esta apto a rodar o SISPED .
+
+             Recomendacao -> Verifique constantemente o estado do seu
+                             Winchester atraves de utilitarios tipo o
+                             NORTON DOCTOR.
+
+
+
+         3  - Instalacao do Sistema
+              ---------------------
+
+            . Como Instalar :
+
+              Insira  o  disco  de instalacao do sistema em um  drive  e  digite
+        "X:INSTALA X Y".
+
+              Onde  X e o drive onde foi inserido o disquete e Y o disco  rigido
+        onde sera instalado o sistema.
+
+              Por exemplo, se o disquete for inserido no drive A para instalar o
+        sistema no drive C,digite "A:INSTALA A C"
+
+              A partir deste momento, guarde o disquete do sistema e ja deixe em
+        separado  o disquete que sera usado para enviar seu arquivo de  dados  a
+        Fetranspor.
+
+              Verifique se a instalacao foi completada corretamente executando o
+        sistema.
+
+              Ao executar o sistema pela primeira vez, escolha no menu principal
+        a  opcao  "UTILITARIOS - CONFIGURACAO"  e tecle <ENTER>, cadastre  nesta
+        tela o nome fantasia da empresa, o numero de  dias  do  mes  do  proximo
+        pedido, o CGC da empresa informante e o padrao de impressao nos vales.
+
+
+
+
+         4 - Procedimentos Padronizados de Operacao
+             --------------------------------------
+
+             Este  item  trata de informar procedimentos que sao  necessarios  a
+        melhor utilizacao de seu sistema.
+
+           . Selecao de Opcao :
+
+             Nos menus do sistema escolha a opcao desejada posicionando-se sobre
+        a  mesma e teclando <ENTER>. Para movimentar a barra luminosa  entre  as
+        opcoes utilize as teclas de setas.
+
+           . Funcao das Teclas :
+
+             <ESC>    - Utilizada sempre com a funcao de saida da operacao.
+             <ENTER>  - Utilizada para confirmar a operacao.
+
+           . Manutencao de dados :
+
+             Para realizar a manutencao  dos  dados,  deve-se selecionar a opcao
+        desejada  e utilizar  um  dos  itens do menu citado na parte inferior da
+        tela.
+
+             A  operacao  de  manutencao  de  dados  permite  incluir,  alterar,
+        consultar ou excluir informacoes do sistema.
+
+             Inclusao  - A inclusao de dados so e permitida caso o identificador
+        do  objeto  nao  esteja cadastrado. Escolha a opcao e  digite  as  novas
+        informacoes.
+
+             Alteracao - A alteracao e possivel caso o objeto esteja cadastrado.
+        Informe  o  codigo de identificacao do objeto e faca  as  alteracoes.  E
+        possivel alterar todos os campos, exceto o que determina a identificacao
+        do objeto.
+
+             Consulta  -  Esta   operacao  permite  a  conferencia  visual   das
+        informacoes de um objeto cadastrado.
+
+             Exclusao  - A exclusao e possivel caso o objeto esteja  cadastrado.
+        Informe  o identificador do objeto e escolha a opcao de  exclusao,  sera
+        solicitada  confirmacao. A exclusao e utilizada em situacoes onde nao  e
+        mais necessario manter as informacoes no sistema, como exemplo, demissao
+        de funcionario, desistencia de pedido ou exclusao de empresa.
+
+           . Acesso a Funcionarios por Nome :
+
+             A  identificacao  do funcionario e feita pelo nome. Selecione Busca
+        digite o nome desejado e o sistema buscara. A ordem utilizada e empresa
+        mais matricula.
+
+
+
+
+
+         5 - Operacao do Sistema
+             -------------------
+
+              Uma vez instalado, o sistema esta pronto para o uso.  Inicialmente
+        deve  ser  feita  a  implantacao da(s)  empresa(s)  e  dos  funcionarios
+        usuarios de vales transporte. Com as informacoes cadastrais incluidas no
+        sistema, pode-se iniciar o processo de solicitacao de vales transporte.
+
+
+         5.1 - Execucao do Sistema
+               -------------------
+
+               O  sistema deve ser executado dentro do diretorio Sisped,  criado
+        automaticamente na instalacao.
+
+              C:\> CD \SISPED
+
+              C:\SISPED\>
+
+              Uma vez dentro do diretorio, digite "SISPED"
+
+              C:\SISPED\> SISPED
+
+
+
+         5.2 - Implantacao do Sistema
+               ----------------------
+
+              Na fase de implantacao sao informados, os dados necessarios  da(s)
+        empresa(s) e de seus funcionarios.
+
+              Antes  de dar prosseguimento a essa fase e importante ressaltar  o
+        conceito  de  subarquivos, mencionado no manual de pedido de  vales  por
+        meio  magnetico da Fetranspor, que determina o tratamento do  pedido  de
+        acordo com a estruturacao dos subarquivos informados.
+
+              Se  no ambiente instalado forem processados pedidos de empresas  e
+        filiais,  com CGC diferentes, a aquisicao de vales transporte  pode  ser
+        feita  atraves  de um unico pedido (disquete) utilizando  um  subarquivo
+        para cada CGC ou atraves de diversos pedidos, com um disquete para  cada
+        pedido.
+
+              Para implantacao de seu sistema e necessario o cadastramento de:
+
+              . Empresa     - Escolhendo opcao "EMPRESA" no menu principal, sera
+        apresentado uma opcao "CADASTRAR", tecle <ENTER> para escolher.
+                Sera  mostrada a relacao de empresas cadastradas, e  caso deseje
+        incluir uma  empresa,  tecle "I",  caso  deseje  excluir ou consultar os
+        dados, selecione com as  setas  a  empresa  desejada  ou utilize a opcao
+        busca para  selecionar com  a barra  luminosa, tecle "E" para excluir ou
+        "C" para consultar.
+                Preste  bastante atencao na utilizacao das setas para a movimen-
+        tacao da barra luminosa.
+
+              . Funcionario - Escolhendo opcao "FUNCIONARIOS" no menu principal,
+        sera  apresentado  uma  nova area para  entrada  de  dados  necessarios,
+        relacionados  ao  funcionario. A identificacao do  funcionario  e  feita
+        atraves  da combinacao do codigo da empresa e da matricula atribuida  ao
+        funcionario.
+
+              . Tarifas - Escolhendo a opcao PEDIDOS e em seguida TARIFAS, o
+        sistema mostrara a relacao das tarifas cadastradas no sistema.
+                Para incluir uma tarifa, digite "I", e informe o codigo da
+        tarifa, que deve ter sido definido previamente.
+
+              Na definicao de tarifas, deve-se levar  em  consideracao  o  valor
+        da tarifa e o meio de transporte, ou seja, nao se deve utilizar um mesmo
+        codigo para designar o mesmo valor de tarifas em meios diferentes.
+
+        Ex: Caso a passagem de trem tenha o valor de R$ 0,35 e a de um onibus
+            esteja tambem R$ 0,35, deve-se criar dois codigos e utiliza-los de
+            forma opurtuna, ou seja :
+
+                O funcionario Fulano de Tal utiliza o onibus XYZ que custa
+            R$ 0,35 e utiliza o trem que custa o mesmo.
+                Definindo-se o codigo 001 para a tarifa R$ 0,35 (onibus) e o
+            codigo 002 para o trem, o pedido deve constar dos dois codigos.
+
+
+
+         5.3 - Solicitacao de Vales Transporte
+               -------------------------------
+
+              A  utilizacao desta rotina e mensal, nela sao informados os  meios
+        de transporte usados e as tarifas para cada funcionario.
+
+              A solicitacao de vales so pode ser feita se a fase de  implantacao
+        ja  foi  completada,  pois  nesse momento se tem  os  dados  basicos  de
+        referencia  da  empresa  e de seus  respectivos  funcionarios.  Caso  um
+        funcionario  seja demitido ou admitido, se faz necessario a inclusao  ou
+        exclusao do funcionario no sistema.
+
+              Escolha a opcao "PEDIDOS" e em seguida a opcao "CADASTRAR" para
+        o sistema receber os pedidos.
+
+              Sera mostrada a relacao de pedidos ja cadastrados. Para ser feita
+        uma inclusao, selecione a opcao "I", digite o codigo da empresa, o
+        codigo do funcionario e o numero de dias uteis do funcionario naquele
+        mes, caso seja diferente do padrao.
+              A tela de itens de pedido sera mostrada, caso o pedido nao exista,
+        para incluir um item, selecione a opcao "I", e informe os dados pedidos.
+
+              Note que o sistema oferece duas acoes para cadastro de pedidos :
+
+          1 - Informar a quem pertence o pedido ;
+          2 - Informar os itens do pedido.
+
+              Em caso de alteracao de algum item, simplesmente escolha o pedido
+        com as setas e escolha a opcao alterar.
+
+
+
+
+
+         5.4 - Geracao do Disquete
+               -------------------
+
+              A geracao do disquete pertence a fase final da rotina do pedido de
+        vales transporte a Fetranspor.
+
+              Somente  apos  o cadastramento de pedidos para os  funcionarios  e
+        possivel realizar a geracao do disquete e da listagem de controle a  ser
+        entregue.
+
+            . Cuidados preliminares a geracao :
+
+              Caso  o arquivo nao caiba num disquete (verifique a existencia  de
+        outros  arquivos  no  disquete),  o  pedido  tera  que  ser  desmembrado
+        gerando,  consequentemente, dois ou mais disquetes, pois  cada  disquete
+        contem um unico pedido.
+
+            . Como gerar o disquete :
+
+              Escolhendo a opcao "DISQUETE" no menu principal, sera  apresentada
+        uma  nova area de entrada de dados onde devera ser informado mes/ano  de
+        referencia do pedido,qual(is) empresa(s) constara(o) no arquivo.
+
+              Para formar um pedido com mais de uma empresa pode-se selecionar a
+        opcao "DISQUETE" e para cada empresa digitar o codigo e teclar  <ENTER>.
+        Apos processar todas as empresas desejadas tecle <ESC> para retornar  ao
+        menu  principal. Neste momento estara fechado o pedido  contendo  varios
+        subarquivos, um para cada empresa processada.
+
+              O  disquete  pode ser gerado no drive "A" ou "B". A  ordenacao  do
+        arquivo  determina  o  que  sera impresso  no  linha  inferior  do  vale
+        transporte   e  a  ordem  de  impressao  dos  vales  para  facilitar   a
+        distribuicao aos funcionarios.
+
+              .  Imediatamente apos a geracao do disquete deve ser executada   a
+        rotina de emissao da listagem de controle, relatorio que ira  acompanhar
+        a entrega do disquete na Fetranspor.
+
+
+
+
+         6 - Relatorios Disponiveis ao Sistema
+             ---------------------------------
+
+             Escolhendo a Opcao "RELATORIOS" do menu principal sera  apresentado
+        uma serie de opcoes de relatorios disponiveis no sistema, sao eles :
+
+           .  Pedido de Funcionario            - Emite um pedido em branco  para
+        cada funcionario informar os meios de transporte e as tarifas utilizadas
+        no  mes. Este relatorio deve ser impresso antes de executar a rotina  de
+        pedido de vales, pois deve ser usado como base para entrada do pedido.
+
+           . Relatorio de Conferencia            - Emite listagem de conferencia
+        contendo os pedidos cadastrados.
+
+           . Listagem de Controle                - Emite listagem de controle de
+        registros  exigida pela fetranspor. Esta listagem espelha o conteudo  do
+        disquete  que  tambem  sera  enviado,  mostrando  para  cada  subarquivo
+        formado, seus respectivos totais.
+
+              Obs  : Esta opcao so pode ser executada apos geracao do  disquete.
+        Este relatorio deve ser entregue a Fetranspor junto com o disquete.
+
+
+
+
+         7 - Utilitarios Disponiveis
+             -----------------------
+
+
+             .  Reordenacao  dos  Arquivos (Reindexacao)- Opcao  utilizada  para
+        atualizar os indices dos arquivos do sistema em caso de problema.
+
+             .  Relatorio em Tela                      - Permite a consulta em
+        tela dos relatorios gerados para Arquivo.
+
+
+
+                                      RODOTEC - Sistemas de Controle Ltda.
+                                      Departamento de Analise e Desenvolvimento.
+

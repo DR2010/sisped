@@ -1,0 +1,24 @@
+
+Para gerar novo diso do Sisped:
+-------------------------------
+
+  1) Gerar SISPED.EXE
+
+  2) Copy SISPED.EXE \SPV2P0\DISCO\JOIN
+
+  3) CD\SPV2P0\DISCO\JOIN
+
+  4) LHA A SISPCOMP
+
+  5) LHA S SISPCOMP
+
+  6) MOVE SISPCOMP.EXE \SPV2P0\DISCO
+
+  7) DEL SISPCOMP.LZH
+
+  8) DEL SISPED.EXE
+
+  9) COPY \SPV2P0\DISCO\*.* A: /V
+
+  FIM.
+
